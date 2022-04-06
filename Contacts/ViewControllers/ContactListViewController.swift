@@ -25,6 +25,9 @@ class ContactListViewController: UITableViewController {
         var content = cell.defaultContentConfiguration()
         let contact = contacts[indexPath.row]
         content.text = contact.fullName
+        content.image = UIImage(named: contact.photo)
+        content.imageProperties.maximumSize.height = 50
+        content.imageProperties.cornerRadius = 25
         cell.contentConfiguration = content
         
         return cell

@@ -10,6 +10,7 @@ struct Person {
     let lastName: String
     let phone: String
     let email: String
+    let photo: String
     
     var fullName: String {
         "\(firstName) \(lastName)"
@@ -23,12 +24,14 @@ struct Person {
         let lastNames = data.lastNames.shuffled()
         let emails = data.emails.shuffled()
         let phones = data.phones.shuffled()
+        let photos = data.photos.shuffled()
         
         for index in 0...9 {
             persons.append(Person(firstName: firstNames[index],
                                   lastName: lastNames[index],
                                   phone: phones[index],
-                                  email: emails[index]))
+                                  email: emails[index],
+                                  photo: photos[index]))
         }
     
         return persons
