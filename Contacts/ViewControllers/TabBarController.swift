@@ -14,7 +14,6 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         transferDataToVC()
-        // Do any additional setup after loading the view.
     }
     
     private func transferDataToVC() {

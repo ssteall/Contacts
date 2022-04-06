@@ -20,11 +20,11 @@ class DataManager {
     let lastNames = ["Stark",
                      "Skywalker",
                      "Drakula",
-                     "Petrov",
-                     "Ivanov",
+                     "Portman",
+                     "Snow",
                      "Gray",
                      "Solo",
-                     "Dyatlov",
+                     "Parker",
                      "Potter",
                      "Malfoy"]
     
@@ -53,5 +53,16 @@ class DataManager {
     let photos = ["1", "2", "3", "4",
                   "5", "6", "7", "8",
                   "9", "10"]
+    
+    let professions = [ "Police Officer",
+                        "Surveyor",
+                        "Architect",
+                        "Zoologist",
+                        "Janitor",
+                        "Maintenance & Repair Worker",
+                        "Lawyer",
+                        "Surveyor",
+                        "Accountant",
+                        "Coach"]
 }
 

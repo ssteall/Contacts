@@ -11,10 +11,6 @@ class ContactListViewController: UITableViewController {
     
     var contacts: [Person]!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return contacts.count
@@ -24,10 +20,13 @@ class ContactListViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "contactID", for: indexPath)
         var content = cell.defaultContentConfiguration()
         let contact = contacts[indexPath.row]
+        
         content.text = contact.fullName
+        content.secondaryText = contact.profession
         content.image = UIImage(named: contact.photo)
         content.imageProperties.maximumSize.height = 50
         content.imageProperties.cornerRadius = 25
+        
         cell.contentConfiguration = content
         
         return cell
@@ -39,6 +38,4 @@ class ContactListViewController: UITableViewController {
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
         aboutContactVC.contact = contacts[indexPath.row]
     }
-    
-
 }
